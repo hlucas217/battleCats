@@ -1,0 +1,72 @@
+.box { 
+        width:80px;
+        height: 80px;
+        display: inline-block;
+        border: #8239CF solid 2px;
+    }
+
+    .showhit {
+        background-image: url("images/fightingcats.jpeg");
+        background-size: contain;
+    }
+
+    .showmiss {
+        background-image: url("images/huggingcats.jpg");
+        background-size: contain;
+    }
+
+    .water {
+        background-color: #C09EE9;
+    }
+
+    #gameBoard {
+        width:650px;
+        height:650px;
+        display: inline;
+        text-align: center;
+    }
+
+    #ilovecats {
+        font-size: 35px;
+        font-family: sans-serif;
+        color: #6221AB;
+        margin: 0px;
+    }
+
+    #catsLeft {
+        font-size: 35px;
+        font-family: sans-serif;
+        color: #6221AB;
+        margin: auto;
+    }
+
+    #lookhowcute {
+        font-size: 35px;
+        font-family: sans-serif;
+        color: #6221AB;
+        margin: 0;
+    }
+
+    .gameOverPic {
+        background: url("images/gameovercats.jpg");
+        margin: 0px;
+        width: 1280px;
+        height: 1024px;
+    }
+
+    .gameOverMessage {
+        font-size: 60px;
+        font-family: sans-serif;
+        color: #E6E6FA;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        margin: 0px;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        width: 1280px;
+        height: 1024px;
+    }
+
+    .grandFinale {
+        text-align: center;
+    }

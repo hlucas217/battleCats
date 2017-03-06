@@ -1,127 +1,13 @@
 <!DOCTYPE html>
 <html lang=en>
 	<head>
-		<script src="jquery-3.1.1.min.js" ></script>
+        <title>Battle Cats</title>
+		<script src="jquery-3.1.1.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
 				integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
 				crossorigin="anonymous"></script>
-		
-		<script>
-
-			var counter = 0;
-			hitsleft = 6;
-
-			function fireZeMissiles(squarenumber) {
-
-				if ($("#" + squarenumber).hasClass("water missme"))
-
-				{
-					$("#ilovecats").hide();
-					$("#" + squarenumber).removeClass("water");
-					$("#" + squarenumber).addClass("showmiss");
-					$("#lookhowcute").html("<div id='lookhowcute'>Awww! You totes missed...but look how cute!</div>");
-				}
-				
-				else if ($("#" + squarenumber).hasClass("water hitme"))
-				{
-					$("#ilovecats").hide();
-					$("#lookhowcute").html("<div id='lookhowcute'></div>");
-					$("#" + squarenumber).removeClass("water");
-					$("#" + squarenumber).addClass("showhit");
-					counter++;
-					hitsleft--;
-
-					if (counter <= 4)
-					{
-						$("#catsLeft").html("<div id='catsLeft'>Keep firing ze missles! Only " + hitsleft + " battle cats left!</div>");
-					}
-
-					if (counter == 5)
-					{
-						$("#catsLeft").html("<div id='catsLeft'>You are almost done! Only " + hitsleft + " battle cat left!</div>");
-					}
-
-					if (counter == 6)
-					{
-						$("#catsLeft").html("<div id='catsLeft'></div>");
-						
-						$("#gameBoard").effect("explode", 1000);
-						$("#gameOver").html("<div id='gameOver'>Congratulations! <br> You found all six battle cats!</div");
-						$("#gameOver").addClass("gameOverPic");
-					};
-				};
-			};
-				
-		</script>
-		
-		<style>
-			.box { 
-				width:80px;
-				height: 80px;
-				display: inline-block;
-				border: #8239CF solid 2px;
-			}
-
-			.showhit {
-				background-image: url("fightingcats.jpeg");
-				background-size: contain;
-			}
-			
-			.showmiss {
-				background-image: url("huggingcats.jpg");
-				background-size: contain;
-			}
-
-			.water {
-				background-color: #C09EE9;
-			}
-
-			#gameBoard {
-				width:650px;
-				height:650px;
-				display: inline;
-				text-align: center;
-			}
-
-			#ilovecats {
-				font-size: 35px;
-				font-family: sans-serif;
-				color: #6221AB;
-				margin: 0px;
-			}
-
-			#catsLeft {
-				font-size: 35px;
-				font-family: sans-serif;
-				color: #6221AB;
-				margin: auto;
-			}
-
-			#lookhowcute {
-				font-size: 35px;
-				font-family: sans-serif;
-				color: #6221AB;
-				margin: 0;
-			}
-
-			#gameOver {
-				font-size: 80px;
-				font-family: sans-serif;
-				color: #6221AB;
-				margin: 0px;
-				text-align: center;
-				background-size: contain;
-			}
-
-			#gameOverPic {
-				background-image: url("gameovercats.jpeg");
-				background-size: contain;
-				position: fixed;
-				bottom: 0;
-			}
-
-		</style>
-		
+        <script src="battlecats.js"></script>
+        <link rel="stylesheet" type="text/css" href="battlecats.css">
 	</head>
 	<body>
 		<div id="gameBoard">
@@ -218,9 +104,7 @@
 			</div>
 
 		</div>
+        <div class="grandFinale"></div>
 
-		<div id="gameOver">
-		<span id="gameOverPic"></spand>
-		</div>
 	</body>
 </html>
